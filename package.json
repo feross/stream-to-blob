@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "blob-to-buffer": "^1.2.6",
-    "standard": "^7.0.0",
+    "standard": "*",
     "string-to-stream": "^1.0.1",
     "tape": "^4.0.0",
     "zuul": "^3.0.0"
