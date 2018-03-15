@@ -1,6 +1,10 @@
 language: node_js
 node_js:
-- node
+  - lts/*
+addons:
+  sauce_connect: true
+  hosts:
+    - airtap.local
 env:
   global:
   - secure: AkSRHcivHXgpnGV+Xxu+PvtQm8tDjK/MUfjPfLgm1UvCUFydd17uRZcDyErZW6ocO49QES9wExMbsL3DNm25jsDCptZQWvGP9VjpNzk45mHxMji3kjJraaRa+PvPp/1+3yUYCrEJDh/TQNjZ7nW71UUufaUokGnQ3bsZ6lRwOh9UmUK3h3KpY93Cx7pamspYKo6en2NatSlNtv8RbXfwtdNFUbr/2S13pzsN0IK3Ht332RCqeRCGB6o8LytVZk/Ot3qiWH9kMLWfy9n0U3RKmeG36aye28B5G6igPB7gW8T+GJKCzJ78WOuPUjGRJ8/zg8qYDNgJh7jbn+RA5uePadLKHvsmzNsVAZQ2XP1PxgCaglz6aR8YuP+wf4ovymEa2eVdNtudZN6qycmRTaPYIrN1cgcOnu4VNQXJkZtXK+CcyX3nQ9I/ZDrlew1PNmpH+RpGDDtGumaywFMvyNM4YnQPXwBt6PibZyRyQXl6OJ3GL/VmBQ9w/VTPV9xTekz6XK2tcufFV6hGsB81PcTizX0Iw9k4jaMSM8fv12Ne0I+fA3QOIDOX1T6SLecaE4rWgquyH4SKOZmM8FTNf7+MJ++VdtXR67pRHQkXUhubY/jKHbzI0mRkoxnjKFMNZg1vQ0tJb3NB+1GgGB3GRcAOH/67T6n9X/p98mH2+++FRKs=
