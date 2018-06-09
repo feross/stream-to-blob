@@ -1,7 +1,7 @@
 {
   "name": "stream-to-blob",
   "description": "Convert a Readable Stream to a Blob",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Feross Aboukhadijeh",
     "email": "feross@feross.org",
