@@ -16,7 +16,7 @@
   "devDependencies": {
     "airtap": "0.0.7",
     "blob-to-buffer": "^1.2.6",
-    "standard": "*",
+    "standard": ">=12.0.1",
     "string-to-stream": "^1.0.1",
     "tape": "^4.0.0"
   },
