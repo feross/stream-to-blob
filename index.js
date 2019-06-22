@@ -20,8 +20,10 @@ module.exports = {
       .on('error', cb)
   },
   getBlobPromise: function (stream, mimeType) {
-    return new Promise(function(resolve, reject) {
-      if (typeof mimeType === 'function') reject('Invalid mimetype, expected string, got function.');
+    return new Promise(function (resolve, reject) {
+      if (typeof mimeType === 'function') {
+        reject(new Error('Invalid mimetype, expected string, got function.'))
+      }
       let chunks = []
       stream.on('data', function (chunk) {
         chunks.push(chunk)
@@ -33,7 +35,7 @@ module.exports = {
             resolve(new Blob(chunks))
           }
         })
-        .on('error', function(err) { reject(err) })
+        .on('error', function (err) { reject(err) })
     })
   }
 }
