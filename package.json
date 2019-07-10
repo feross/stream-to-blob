@@ -18,15 +18,18 @@
     "string-to-stream": "^2.0.0",
     "tape": "^4.0.0"
   },
+  "engines": {
+    "node": ">=8"
+  },
   "homepage": "https://github.com/feross/stream-to-blob",
   "keywords": [
-    "stream",
-    "buffer",
-    "convert stream to blob",
     "blob",
+    "buffer",
     "convert",
+    "convert stream to blob",
     "length",
-    "name"
+    "name",
+    "stream"
   ],
   "license": "MIT",
   "main": "index.js",
