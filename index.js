@@ -1,21 +1,21 @@
 /* global Blob */
 
-module.exports = function (stream, mimeType) {
-  return new Promise(function (resolve, reject) {
-    if (typeof mimeType === 'function') {
-      reject(new Error('Invalid mimetype, expected string, got function.'))
-    }
-    let chunks = []
-    stream.on('data', function (chunk) {
-      chunks.push(chunk)
-    })
-      .on('end', function () {
-        if (typeof mimeType === 'string') {
-          resolve(new Blob(chunks, { type: mimeType }))
-        } else {
-          resolve(new Blob(chunks))
-        }
+module.exports = streamToBlob
+
+function streamToBlob (stream, mimeType) {
+  if (mimeType != null && typeof mimeType !== 'string') {
+    throw new Error('Invalid mimetype, expected string.')
+  }
+  return new Promise((resolve, reject) => {
+    const chunks = []
+    stream
+      .on('data', chunk => chunks.push(chunk))
+      .once('end', () => {
+        const blob = mimeType != null
+          ? new Blob(chunks, { type: mimeType })
+          : new Blob(chunks)
+        resolve(blob)
       })
-      .on('error', function (err) { reject(err) })
+      .once('error', reject)
   })
 }
