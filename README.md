@@ -25,24 +25,20 @@ npm install stream-to-blob
 ## usage
 
 ```js
-var toBlob = require('stream-to-blob')
+const streamToBlob = require('stream-to-blob')
 
-toBlob(fs.createReadStream('file.txt'))
-  .then(function(blob) {
-    console.log(blob)
-  })
-  .catch(function(err) {
-    console.error(err)
-  })
+const stream = fs.createReadStream('file.txt')
+const blob = await streamToBlob(stream)
 ```
 
 ## api
 
-### toBlob(stream, [mimeType])
+### promise = streamToBlob(stream, [mimeType])
 
-Convert the Readable `stream` into a W3C `Blob`, optionally, with the given `mimeType`. 
-It returns a `Promise` with `Blob` object on success or throws `Error` if failed.
+Convert the given readable stream, `stream`, into a W3C `Blob`. If `mimeType` is provided, then the `Blob` will have its mime type set to that value.
+
+Returns a `Promise` which resolves to a `Blob` object on success. Otherwise, rejects with an `Error`.
 
 ## license
 
-MIT. Copyright (c) [Feross Aboukhadijeh](http://feross.org).
+MIT. Copyright (c) [Feross Aboukhadijeh](https://feross.org).
