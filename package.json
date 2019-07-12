@@ -12,7 +12,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "airtap": "2.0.3",
+    "airtap": "^2.0.3",
     "blob-to-buffer": "^1.2.6",
     "standard": "*",
     "string-to-stream": "^2.0.0",
