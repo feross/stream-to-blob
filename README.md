@@ -27,7 +27,7 @@ npm install stream-to-blob
 ```js
 const streamToBlob = require('stream-to-blob')
 
-const stream = fs.createReadStream('file.txt')
+const stream = new stream.Readable() // any Node.js readable stream
 const blob = await streamToBlob(stream)
 ```
 
