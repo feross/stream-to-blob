@@ -16,7 +16,7 @@
     "blob-to-buffer": "^1.2.6",
     "standard": "*",
     "string-to-stream": "^3.0.0",
-    "tape": "^4.0.0"
+    "tape": "^5.0.0"
   },
   "engines": {
     "node": ">=8"
