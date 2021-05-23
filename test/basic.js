@@ -1,7 +1,9 @@
 const test = require('tape')
-const toBlob = require('../')
+// Could perhaps be replace with blob.text()
 const toBuffer = require('blob-to-buffer')
+// TODO: replace with stream.Readable.from
 const toStream = require('string-to-stream')
+const toBlob = require('../index.js')
 
 test('basic usage with Promise', t => {
   t.plan(2)
